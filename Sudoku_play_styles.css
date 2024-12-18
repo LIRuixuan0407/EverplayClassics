@@ -1,0 +1,287 @@
+.back-button {
+  position: absolute;
+  top: 8px;
+  left: 14px;
+  cursor: pointer;
+  color: #333;
+  width: 50px;
+  height: 50px;
+  background-color: #b05b24;
+  clip-path: polygon(45% 0%, 40% 36%, 100% 32%, 100% 70%, 40% 63%, 45% 100%, 0% 50%);
+}
+
+.back-button:hover {
+opacity: 0.7;
+}
+
+html {
+  background-color: #39a2db;
+}
+
+#SudokuBoard {
+  width: 703px;
+  height: 703px;
+  margin: auto;
+  box-shadow: 10px 1px 8px rgba(0, 0, 0, 0.3), 10px 8px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+}
+
+#m4 {
+  padding: 5px;
+}
+
+#m1,
+#m7 {
+  padding: 0px 5px 0px 5px;
+}
+
+#m3,
+#m5 {
+  padding: 5px 0px 5px 0px;
+}
+
+.matrixSquare {
+  float: left;
+}
+
+.matrixRow {
+  float: left;
+}
+
+.matrixCell {
+  display: table-cell;
+  position: relative;
+}
+
+.matrix1 .matrixCell {
+  width: 75px;
+  height: 75px;
+  border: 1px solid #f98919;
+  background-color: #feffef;
+  opacity: 0.8;
+  border-radius: 15px;
+}
+
+.matrix2 .matrixCell {
+  width: 75px;
+  height: 75px;
+  border: 1px solid #feffef;
+  background-color: #f98919;
+  opacity: 0.8;
+  border-radius: 15px;
+}
+
+#subMatrix {
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+}
+
+.subMatrixRow {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.editSubCell {
+  width: 10px;
+  height: 10px;
+  display: table-cell;
+  overflow: hidden;
+  margin: auto;
+}
+
+.editMainSubCell {
+  width: 10px;
+  height: 10px;
+  display: table-cell;
+  overflow: hidden;
+  margin: auto;
+}
+
+.editSubCell input {
+  font-family: Futura;
+  font-size: 12px;
+  font-weight: bold;
+  width: 25px;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+  background: none !important;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+.editMainSubCell input {
+  font-family: Futura;
+  font-size: 24px;
+  font-weight: bold;
+  color: #f98919;
+  width: 25px;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+  background: none !important;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+.matrix1 .editMainSubCell input {
+  color: #f98919;
+}
+
+.matrix2 .editMainSubCell input {
+  color: #feffef;
+}
+
+#guessCardTable {
+  position: relative;
+  float: left;
+  left: 12px;
+  display: none;
+}
+
+#cellPopUp {
+  position: fixed;
+  display: none;
+  width: 0px;
+  height: 0px;
+  opacity: 0.8;
+  border-radius: 15px;
+}
+
+.popUpRow {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.guessCell {
+  display: table-cell;
+  overflow: hidden;
+  width: 58px;
+  height: 50px;
+}
+
+.guessEdit {
+  width: 58px;
+  height: 50px;
+  display: table-cell;
+  overflow: auto;
+}
+
+.mainGuessEdit {
+  width: 58px;
+  height: 50px;
+  display: table-cell;
+  overflow: auto;
+}
+
+.guessEdit input {
+  font-family: Futura;
+  font-size: 20px;
+  font-weight: bold;
+  color: #feffef;
+  width: 35px;
+  padding: 0px;
+  border: 0px;
+  background: #f98919;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 10px;
+  overflow: auto;
+  margin: auto;
+}
+
+.mainGuessEdit input {
+  font-family: Futura;
+  font-size: 40px;
+  font-weight: bold;
+  color: #feffef;
+  width: 35px;
+  padding: 0px;
+  border: 0px;
+  background: #f98919;
+  opacity: 0.6;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 10px;
+  overflow: auto;
+  margin: auto;
+}
+
+.controls {
+  width: 200px;
+  height: 50px;
+  display: inline-block;
+  margin: 0px 15px 25px 15px;
+  box-shadow: 5px 5px 10px 0px #97c4fe;
+  background-color: #015697;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  border: 4px solid #337fed;
+  display: inline-block;
+  cursor: pointer;
+  color: #feffef;
+  font-family: Futura;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.controls:hover {
+  background: -moz-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
+  background: -webkit-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
+  background: -o-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
+  background: -ms-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
+  background: linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6', GradientType=0);
+  background-color: #1e62d0;
+}
+
+.controls:active {
+  position: relative;
+  top: 1px;
+}
+
+#buttonBar {
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#buttonBar li {
+  display: inline;
+}
+
+#content {
+  display: block;
+}
+
+#header {
+  font-family: "Futura";
+  font-size: x-large;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.hoverBackground1 {
+  background-color: #f98919;
+  border-radius: 15px;
+}
+
+.hoverBackground2 {
+  background-color: #feffef;
+  border-radius: 15px;
+}
+

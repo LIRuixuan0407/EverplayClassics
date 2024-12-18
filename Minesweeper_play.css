@@ -1,0 +1,171 @@
+.back-button {
+  position: absolute;
+  top: 8px;
+  left: 14px;
+  cursor: pointer;
+  color: #333;
+  width: 50px;
+  height: 50px;
+  background-color: #b05b24;
+  clip-path: polygon(45% 0%, 40% 36%, 100% 32%, 100% 70%, 40% 63%, 45% 100%, 0% 50%);
+}
+
+.back-button:hover {
+opacity: 0.7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90vh;
+  font-family: Futura;
+  background: #39a2db;
+  position: relative;
+  text-align: center;
+}
+
+header {
+  letter-spacing: 0.2em;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+  #modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #39a2db;
+  text-align: center;
+}
+.modal-box {
+  padding: 30px;
+  margin: auto;
+  width: 240px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 10px 10px 2px 3px rgba(0,0,0,0.7);
+}
+.modal-box p {
+  color: #e91e63;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+}
+
+.play {
+  width: 160px;
+  margin: auto;
+  padding: 10px;
+  border: solid 1px #e91e63;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.play:hover {
+  color: white;
+  background: #e91e63;
+}
+
+
+section {
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.mine-head {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  height: 70px;
+  background: white;
+  border-bottom: 2px solid #333;
+  padding: 5px;
+  text-align: center;
+}
+
+.flag {
+  line-height: 50px;
+  width: 100px;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 30px;
+  color: #1a237e;
+}
+
+.smile {
+  font-size: 30px;
+  color: #ff8a00;
+  text-align: center;
+}
+
+.time {
+  line-height: 50px;
+  width: 100px;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 30px;
+  color: #1a237e;
+}
+
+.mine-body {
+  width: 600px;
+  height: 600px;
+  background: white;
+  padding: 5px;
+}
+
+.box {
+  width: 10%;
+  height: 10%;
+  cursor: pointer;
+  text-align: center;
+  border: 5px #928e8d solid ;
+  color: #333;
+}
+
+.box.backgrounded {
+  background: #a2a2a2;
+  color: transparent;
+  border-color: transparent;
+}
+
+.box.backgrounded:hover {
+  opacity: 0.7;
+}
+
+.box.flagged {
+  background: #e74c3c !important;
+  color: transparent;
+  border-color: transparent;
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+.box i {
+  font-size: 26px;
+}

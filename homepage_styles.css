@@ -1,0 +1,248 @@
+.top-search-bar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #101F39;
+  padding: 5px;
+  box-sizing: border-box;
+  z-index: 1;
+  border-bottom: 6px solid #065279;
+  position: fixed;
+}
+
+.logo {
+  float: left;
+  margin-right: 20px;
+  margin-top: 0px;
+}
+
+input {
+  width: 54%;
+  height: 38px;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-right: 20px;
+}
+
+#itemList {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-family: Futura;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: black;
+  margin-left: 15vw;
+  margin-top: 8px;
+  width: 250px;
+}
+
+li:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+
+.language-select {
+  position: absolute;
+  right: 54px;
+  padding: 10px 2px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f8b37f;
+  cursor: pointer;
+}
+
+.heart-button {
+  color: #ff165d;
+  font-size: 21px;
+  position: absolute;
+  height: 42.7px;
+  right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f8b37f;
+  cursor: pointer;
+  line-height: 25px;
+}
+
+.heart-button:hover,
+.language-select:hover {
+  opacity: 0.8;
+}
+
+.btn-animate {
+  position: absolute;
+  width: 7%;
+  right: 23%;
+  top: 8px;
+  height: 40px;
+  line-height: 38px;
+  border: none;
+  border-radius: 7px;
+  background: #50b9c7;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-animate__surround {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #50b9c7;
+    transition: all 0.3s ease;
+  }
+
+  &::before {
+    height: 0%;
+    width: 2px;
+  }
+
+  &::after {
+    width: 0%;
+    height: 2px;
+  }
+
+  &:hover {
+    background: transparent;
+
+    &::before {
+      height: 100%;
+    }
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  & > span {
+    display: block;
+
+    &:hover {
+      color: #50b9c7;
+
+      &::before {
+        height: 100%;
+      }
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: #50b9c7;
+      transition: all 0.3s ease;
+    }
+
+    &:before {
+      width: 2px;
+      height: 0%;
+    }
+
+    &:after {
+      width: 0%;
+      height: 2px;
+    }
+  }
+}
+
+.custom-hr {
+  border: none;
+  border-top: 10px dashed #ff8a00;
+  margin: 0;
+  background-color: #11373a;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+  background-color: #39a2db;
+  border: 30px solid #39a2db;
+}
+
+.grid-item {
+  position: relative;
+  border-radius: 45px;
+  border: 6px solid #bad7df;
+  overflow: hidden;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icon {
+  position: absolute;
+  top: 40%;
+  display: flex;
+  color: #fff;
+
+  transition: opacity 0.5s ease-in-out;
+}
+
+.intro-text {
+  font-size: 25px;
+  font-family: "Futura";
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  margin-left: 30px;
+}
+
+.grid-item:hover .icon {
+  opacity: 0.5;
+}
+
+.grid-item:hover .intro-text {
+  font-family: "Futura";
+  font-size: 25px;
+  opacity: 1;
+}
+
+.grid-item:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  animation: blur 0.3s ease-in-out;
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(0);
+  }
+  100% {
+    filter: blur(30px);
+    backdrop-filter: blur(10px);
+  }
+}

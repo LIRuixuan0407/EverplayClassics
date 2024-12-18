@@ -1,0 +1,51 @@
+.back-button {
+    position: absolute;
+    top: 8px;
+    left: 14px;
+    cursor: pointer;
+    color: #333;
+    width: 50px;
+    height: 50px;
+    background-color: #b05b24;
+    clip-path: polygon(45% 0%, 40% 36%, 100% 32%, 100% 70%, 40% 63%, 45% 100%, 0% 50%);
+}
+
+.back-button:hover {
+  opacity: 0.7;
+}
+
+body{
+	background-color:#39a2db;
+}
+
+
+.canvas_wrap{
+	display:block;
+	margin: 0 auto;
+	padding-top: 25px;
+}
+
+.canvas_wrap>* {
+	display: block;
+	margin: 0 auto;
+	border: 8px solid #85532e;
+  border-radius: 15px;
+}
+
+.canvas_wrap>button {
+  margin-top: 15px;
+  padding: 10px;
+  font-family: Futura;
+  font-size: 30px;
+  font-weight: bold;
+  border: 5px solid #303030;
+  border-radius: 15px;
+  background-color: #dbd8cf;
+  color: #303030;
+  cursor: pointer;
+}
+
+.canvas_wrap>button:hover {
+  opacity: 0.7;
+}
+ 
